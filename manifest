@@ -1,0 +1,16 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: cardInvocation
+author: Hazem Khaled
+license: Specify your license
+copyright: Copyright @ 2014
+
+# these should not be edited
+name: cardInvocation
+moduleid: net.digipresence.cardinvocation
+guid: 025d3a56-5808-4747-a0af-55d6bb45ed8a
+platforms: blackberry

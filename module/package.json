@@ -1,0 +1,10 @@
+{
+    "description": "This is the Card Invocation package descriptor", 
+    "type": "native",
+    "directories": {
+        "lib": ""
+    }, 
+    "main": "Card Invocation", 
+    "name": "Card Invocation", 
+    "version": "0.1.0"
+}
