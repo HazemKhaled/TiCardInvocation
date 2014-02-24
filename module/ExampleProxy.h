@@ -18,13 +18,12 @@ public:
 	ExampleProxy(const char*);
 	virtual ~ExampleProxy();
 
-	// Method exampleMethod
+	// Methods
 	Ti::TiValue openURLMethod(Ti::TiValue);
 	EXPOSE_METHOD(ExampleProxy, openURLMethod);
 
-private slots:
-	//void cardReplyFinished();
-	//void cardDone(const bb::system::CardDoneMessage& message);
+	Ti::TiValue callPhoneNumberMethod(Ti::TiValue);
+	EXPOSE_METHOD(ExampleProxy, callPhoneNumberMethod);
 
 private:
 	bb::system::InvokeManager invokeManager_;
