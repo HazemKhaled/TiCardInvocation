@@ -25,6 +25,15 @@ public:
 	Ti::TiValue callPhoneNumberMethod(Ti::TiValue);
 	EXPOSE_METHOD(ExampleProxy, callPhoneNumberMethod);
 
+	Ti::TiValue socialShareMethod(Ti::TiValue);
+	EXPOSE_METHOD(ExampleProxy, socialShareMethod);
+
+	Ti::TiValue openSettingsMethod(Ti::TiValue);
+	EXPOSE_METHOD(ExampleProxy, openSettingsMethod);
+
+	Ti::TiValue openPdfMethod(Ti::TiValue);
+	EXPOSE_METHOD(ExampleProxy, openPdfMethod);
+
 private:
 	bb::system::InvokeManager invokeManager_;
 	QPointer<bb::system::InvokeTargetReply> invokeReply_;
