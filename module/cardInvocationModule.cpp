@@ -9,7 +9,7 @@
 
 cardInvocationModule::cardInvocationModule(const char* name) :
 		Ti::TiModule(name) {
-	addFunction("createExample", ExampleProxy::CreateProxy);
+	addFunction("createInvocationManager", ExampleProxy::CreateProxy);
 }
 
 cardInvocationModule::~cardInvocationModule() {

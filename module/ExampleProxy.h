@@ -9,6 +9,8 @@
 #define NATIVE_cardInvocation_TESTPROXY_H_
 
 #include "TiCore.h"
+#include <bb/system/InvokeManager>
+#include <bb/system/InvokeTargetReply>
 
 class ExampleProxy: Ti::TiProxy {
 public:
@@ -17,8 +19,16 @@ public:
 	virtual ~ExampleProxy();
 
 	// Method exampleMethod
-	Ti::TiValue exampleMethod(Ti::TiValue);
-	EXPOSE_METHOD(ExampleProxy, exampleMethod);
+	Ti::TiValue openURLMethod(Ti::TiValue);
+	EXPOSE_METHOD(ExampleProxy, openURLMethod);
+
+private slots:
+	//void cardReplyFinished();
+	//void cardDone(const bb::system::CardDoneMessage& message);
+
+private:
+	bb::system::InvokeManager invokeManager_;
+	QPointer<bb::system::InvokeTargetReply> invokeReply_;
 };
 
 #endif /* NATIVE_cardInvocation_TESTPROXY_H_ */
