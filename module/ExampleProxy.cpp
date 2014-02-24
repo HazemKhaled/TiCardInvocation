@@ -11,7 +11,7 @@ ExampleProxy::ExampleProxy(const char* name) :
 		Ti::TiProxy(name) {
 
 	// Create a method, it also has to start with `_`
-	createPropertyFunction("example", _example);
+	createPropertyFunction("example", _exampleMethod);
 
 }
 
@@ -19,7 +19,12 @@ ExampleProxy::~ExampleProxy() {
 	// delete instatiated pointers
 }
 
-/*void ExampleProxy::initEnd() {
+/*void ExampleProxy::initStart() {
+	// Called when proxy created from JS and
+	// not properties have been applied
+}
+
+void ExampleProxy::initEnd() {
 	// Called when proxy created from JS and
 	// properties have been applied
 }*/
