@@ -1,3 +1,4 @@
 ._*
 .DS_Store
-module/arm/Makefile*
+module/*/Makefile*
+*.o
