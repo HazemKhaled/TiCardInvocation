@@ -48,3 +48,4 @@ RCC_DIR = $${DESTDIR}/.rcc
 UI_DIR = $${DESTDIR}/.ui
 LIBS += -lbbsystem
 LIBS += -lbb
+ LIBS += -lbbplatform

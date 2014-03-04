@@ -34,6 +34,9 @@ public:
 	Ti::TiValue openPdfMethod(Ti::TiValue);
 	EXPOSE_METHOD(ExampleProxy, openPdfMethod);
 
+	Ti::TiValue openMapMethod(Ti::TiValue);
+	EXPOSE_METHOD(ExampleProxy, openMapMethod);
+
 private:
 	bb::system::InvokeManager invokeManager_;
 	QPointer<bb::system::InvokeTargetReply> invokeReply_;

@@ -13,7 +13,12 @@
 // to send number data while invoking phone application
 #include <bb/PpsObject>
 
+// Map
+#include <bb/platform/LocationMapInvoker>
+#include <bb/platform/RouteMapInvoker>
+
 using namespace bb::system;
+using namespace bb::platform;
 
 ExampleProxy::ExampleProxy(const char* name) :
 		Ti::TiProxy(name) {
@@ -24,6 +29,7 @@ ExampleProxy::ExampleProxy(const char* name) :
 	createPropertyFunction("socialShare", _socialShareMethod);
 	createPropertyFunction("openSettings", _openSettingsMethod);
 	createPropertyFunction("openPdf", _openPdfMethod);
+	createPropertyFunction("openMap", _openMapMethod);
 
 }
 
@@ -53,7 +59,7 @@ Ti::TiValue ExampleProxy::openURLMethod(Ti::TiValue url) {
 		return returnValue;
 	}
 
-	//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
+		//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
 	returnValue.setBool(true);
 	return returnValue;
 }
@@ -72,7 +78,7 @@ Ti::TiValue ExampleProxy::callPhoneNumberMethod(Ti::TiValue number) {
 
 	QVariantMap map;
 	map.insert("number", myNumber);
-    QByteArray requestData = bb::PpsObject::encode(map, NULL);
+	QByteArray requestData = bb::PpsObject::encode(map, NULL);
 
 	InvokeRequest request;
 	request.setAction("bb.action.DIAL");
@@ -111,7 +117,7 @@ Ti::TiValue ExampleProxy::socialShareMethod(Ti::TiValue text) {
 		return returnValue;
 	}
 
-	//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
+		//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
 	returnValue.setBool(true);
 	return returnValue;
 }
@@ -138,7 +144,7 @@ Ti::TiValue ExampleProxy::openSettingsMethod(Ti::TiValue page) {
 		return returnValue;
 	}
 
-	//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
+		//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
 	returnValue.setBool(true);
 	return returnValue;
 }
@@ -158,14 +164,58 @@ Ti::TiValue ExampleProxy::openPdfMethod(Ti::TiValue url) {
 	request.setTarget("com.rim.bb.app.adobeReader.viewer");
 	request.setAction("bb.action.VIEW");
 	request.setMimeType("application/pdf");
-	request.setUri("file:" + QDir::currentPath() + "/app/native/assets/" + myUrl);
+	request.setUri(
+			"file:" + QDir::currentPath() + "/app/native/assets/" + myUrl);
 	invokeReply_ = invokeManager_.invoke(request);
 	if (!invokeReply_) {
 		fprintf(stderr, "Failed to invoke this card\n");
 		return returnValue;
 	}
 
-	//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
+		//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
+	returnValue.setBool(true);
+	return returnValue;
+}
+
+Ti::TiValue ExampleProxy::openMapMethod(Ti::TiValue type) {
+	Ti::TiValue returnValue;
+	returnValue.toBool();
+
+	// convert variable to QString
+	QString myType = type.toString();
+
+	if (myType == "pin") {
+		LocationMapInvoker lmi;
+
+		// Sample location set as Toronto
+		// Latitude and Longitude values are expressed
+		// in WGS 84 datum standard
+		lmi.setLocationLatitude(25.1980730);
+		lmi.setLocationLongitude(55.2728830);
+		lmi.setLocationName("Burj Khalifa");
+		lmi.setLocationDescription("The tallest building in the world.");
+
+		//set "geocode" : false
+		lmi.setGeocodeLocationEnabled(true);
+
+		//set "geolocation" : false
+		lmi.setCurrentLocationEnabled(true);
+		lmi.go();
+	} else {
+		RouteMapInvoker rmi;
+
+		// Latitude and Longitude values are expressed
+		// in WGS 84 datum standard
+		rmi.setEndLatitude(25.1412000);
+		rmi.setEndLongitude(55.1854000);
+		rmi.setEndName("Burj Al-Arab");
+		rmi.setEndDescription("The royal suite");
+		rmi.setEndAddress("Burj Al-Arab, Dubai");
+		rmi.setNavigationMode(bb::platform::MapNavigationMode::FastestRoute);
+		rmi.setTransportationMode(bb::platform::MapTransportationMode::Car);
+		rmi.go();
+	}
+
 	returnValue.setBool(true);
 	return returnValue;
 }
