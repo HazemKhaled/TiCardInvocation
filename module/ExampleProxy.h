@@ -28,6 +28,9 @@ public:
 	Ti::TiValue socialShareMethod(Ti::TiValue);
 	EXPOSE_METHOD(ExampleProxy, socialShareMethod);
 
+	Ti::TiValue facebookShareMethod(Ti::TiValue);
+	EXPOSE_METHOD(ExampleProxy, facebookShareMethod);
+
 	Ti::TiValue openSettingsMethod(Ti::TiValue);
 	EXPOSE_METHOD(ExampleProxy, openSettingsMethod);
 

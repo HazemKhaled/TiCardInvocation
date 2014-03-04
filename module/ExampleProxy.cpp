@@ -27,6 +27,7 @@ ExampleProxy::ExampleProxy(const char* name) :
 	createPropertyFunction("openURL", _openURLMethod);
 	createPropertyFunction("callPhoneNumber", _callPhoneNumberMethod);
 	createPropertyFunction("socialShare", _socialShareMethod);
+	createPropertyFunction("facebookShare", _facebookShareMethod);
 	createPropertyFunction("openSettings", _openSettingsMethod);
 	createPropertyFunction("openPdf", _openPdfMethod);
 	createPropertyFunction("openMap", _openMapMethod);
@@ -59,7 +60,6 @@ Ti::TiValue ExampleProxy::openURLMethod(Ti::TiValue url) {
 		return returnValue;
 	}
 
-		//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
 	returnValue.setBool(true);
 	return returnValue;
 }
@@ -95,6 +95,14 @@ Ti::TiValue ExampleProxy::callPhoneNumberMethod(Ti::TiValue number) {
 }
 
 Ti::TiValue ExampleProxy::socialShareMethod(Ti::TiValue text) {
+	Ti::TiValue returnValue;
+	returnValue.toBool();
+
+	returnValue.setBool(true);
+	return returnValue;
+}
+
+Ti::TiValue ExampleProxy::facebookShareMethod(Ti::TiValue text) {
 	//TODO: support image & url
 	Ti::TiValue returnValue;
 	returnValue.toBool();
@@ -107,6 +115,7 @@ Ti::TiValue ExampleProxy::socialShareMethod(Ti::TiValue text) {
 	QString myText = text.toString();
 
 	InvokeRequest request;
+	request.setTarget("Facebook");
 	request.setAction("bb.action.SHARE");
 	request.setMimeType("text/plain");
 	//request.setUri(myUrl);
@@ -117,7 +126,6 @@ Ti::TiValue ExampleProxy::socialShareMethod(Ti::TiValue text) {
 		return returnValue;
 	}
 
-		//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
 	returnValue.setBool(true);
 	return returnValue;
 }
@@ -144,7 +152,6 @@ Ti::TiValue ExampleProxy::openSettingsMethod(Ti::TiValue page) {
 		return returnValue;
 	}
 
-		//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
 	returnValue.setBool(true);
 	return returnValue;
 }
@@ -172,7 +179,6 @@ Ti::TiValue ExampleProxy::openPdfMethod(Ti::TiValue url) {
 		return returnValue;
 	}
 
-		//connect(invokeReply_, SIGNAL(finished()), SLOT(cardReplyFinished));
 	returnValue.setBool(true);
 	return returnValue;
 }
