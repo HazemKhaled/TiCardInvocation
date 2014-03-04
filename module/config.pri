@@ -4,13 +4,13 @@ BASEDIR =  $$quote($$_PRO_FILE_PWD_)
 device {
     CONFIG(debug, debug|release) {
         INCLUDEPATH +=  $$quote($$BASEDIR/../cardInvocation/include) \
-                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140214140905/blackberry/ticore/include") \
+                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include") \
                  $$quote(${QNX_TARGET}/../target-override/usr/include) \
                  $$quote(${QNX_TARGET}/usr/include/bb/data) \
                  $$quote(${QNX_TARGET}/usr/include/freetype2)
 
         DEPENDPATH +=  $$quote($$BASEDIR/../cardInvocation/include) \
-                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140214140905/blackberry/ticore/include") \
+                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include") \
                  $$quote(${QNX_TARGET}/../target-override/usr/include) \
                  $$quote(${QNX_TARGET}/usr/include/bb/data) \
                  $$quote(${QNX_TARGET}/usr/include/freetype2)
@@ -19,13 +19,13 @@ device {
 
     CONFIG(release, debug|release) {
         INCLUDEPATH +=  $$quote($$BASEDIR/../cardInvocation/include) \
-                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140214140905/blackberry/ticore/include") \
+                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include") \
                  $$quote(${QNX_TARGET}/../target-override/usr/include) \
                  $$quote(${QNX_TARGET}/usr/include/bb/data) \
                  $$quote(${QNX_TARGET}/usr/include/freetype2)
 
         DEPENDPATH +=  $$quote($$BASEDIR/../cardInvocation/include) \
-                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140214140905/blackberry/ticore/include") \
+                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include") \
                  $$quote(${QNX_TARGET}/../target-override/usr/include) \
                  $$quote(${QNX_TARGET}/usr/include/bb/data) \
                  $$quote(${QNX_TARGET}/usr/include/freetype2)
@@ -38,7 +38,7 @@ simulator {
         INCLUDEPATH +=  $$quote(${QNX_TARGET}/usr/include/qt4/cpp/c) \
                  $$quote($$BASEDIR/../cardInvocation/include) \
                  $$quote(${QNX_TARGET}/usr/include/qt4) \
-                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140214140905/blackberry/ticore/include") \
+                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include") \
                  $$quote(${QNX_TARGET}/usr/include/qt4/cpp/embedded) \
                  $$quote(${QNX_TARGET}/usr/include/qt4/cpp) \
                  $$quote(${QNX_TARGET}/usr/include/qt4/) \
@@ -50,7 +50,7 @@ simulator {
         DEPENDPATH +=  $$quote(${QNX_TARGET}/usr/include/qt4/cpp/c) \
                  $$quote($$BASEDIR/../cardInvocation/include) \
                  $$quote(${QNX_TARGET}/usr/include/qt4) \
-                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140214140905/blackberry/ticore/include") \
+                 $$quote("/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include") \
                  $$quote(${QNX_TARGET}/usr/include/qt4/cpp/embedded) \
                  $$quote(${QNX_TARGET}/usr/include/qt4/cpp) \
                  $$quote(${QNX_TARGET}/usr/include/qt4/) \
