@@ -40,6 +40,9 @@ public:
 	Ti::TiValue openMapMethod(Ti::TiValue);
 	EXPOSE_METHOD(ExampleProxy, openMapMethod);
 
+	Ti::TiValue openContactsMethod(Ti::TiValue);
+	EXPOSE_METHOD(ExampleProxy, openContactsMethod);
+
 private:
 	bb::system::InvokeManager invokeManager_;
 	QPointer<bb::system::InvokeTargetReply> invokeReply_;

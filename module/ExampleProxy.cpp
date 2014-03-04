@@ -17,8 +17,12 @@
 #include <bb/platform/LocationMapInvoker>
 #include <bb/platform/RouteMapInvoker>
 
+// contacts
+#include <bb/cascades/pickers/ContactPicker>
+
 using namespace bb::system;
 using namespace bb::platform;
+using namespace bb::cascades::pickers;
 
 ExampleProxy::ExampleProxy(const char* name) :
 		Ti::TiProxy(name) {
@@ -31,6 +35,7 @@ ExampleProxy::ExampleProxy(const char* name) :
 	createPropertyFunction("openSettings", _openSettingsMethod);
 	createPropertyFunction("openPdf", _openPdfMethod);
 	createPropertyFunction("openMap", _openMapMethod);
+	createPropertyFunction("openContacts", _openContactsMethod);
 
 }
 
@@ -221,6 +226,20 @@ Ti::TiValue ExampleProxy::openMapMethod(Ti::TiValue type) {
 		rmi.setTransportationMode(bb::platform::MapTransportationMode::Car);
 		rmi.go();
 	}
+
+	returnValue.setBool(true);
+	return returnValue;
+}
+
+Ti::TiValue ExampleProxy::openContactsMethod(Ti::TiValue text) {
+	Ti::TiValue returnValue;
+	returnValue.toBool();
+	ContactPicker *contactPicker = new ContactPicker();
+	contactPicker->setMode(ContactSelectionMode::Single);
+	contactPicker->setKindFilters(
+			QSet<bb::pim::contacts::AttributeKind::Type>()
+					<< bb::pim::contacts::AttributeKind::Phone);
+	contactPicker->open();
 
 	returnValue.setBool(true);
 	return returnValue;

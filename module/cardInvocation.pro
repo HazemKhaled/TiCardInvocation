@@ -49,3 +49,4 @@ UI_DIR = $${DESTDIR}/.ui
 LIBS += -lbbsystem
 LIBS += -lbb
  LIBS += -lbbplatform
+ LIBS += -lbbcascadespickers
