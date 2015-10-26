@@ -7,7 +7,7 @@ CONFIG += qt staticlib warn_on debug_and_release cascades mobility
 MOBILITY += sensors
 
 
-TI_BB_SDK = "/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs"
+TI_BB_SDK = "~/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs"
 
 INCLUDEPATH += \
 	. \

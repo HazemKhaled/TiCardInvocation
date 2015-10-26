@@ -6,8 +6,8 @@ version: 0.1
 apiversion: 2
 description: cardInvocation
 author: Hazem Khaled
-license: Specify your license
-copyright: Copyright @ 2014
+license: MIT
+copyright: Copyright @ 2014 Digipresence
 
 # these should not be edited
 name: cardInvocation

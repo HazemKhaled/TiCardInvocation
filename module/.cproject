@@ -40,7 +40,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/cardInvocation/include}"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/bb/data"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;~/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include&quot;"/>
 								</option>
 								<option id="com.qnx.qcc.option.compiler.defines.1265970181" name="Defines (-D)" superClass="com.qnx.qcc.option.compiler.defines" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="_REENTRANT"/>
@@ -105,7 +105,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/cardInvocation/include}"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/bb/data"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;~/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include&quot;"/>
 								</option>
 								<option id="com.qnx.qcc.option.compiler.defines.329860137" name="Defines (-D)" superClass="com.qnx.qcc.option.compiler.defines" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="_REENTRANT"/>
@@ -166,7 +166,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/../target-override/usr/include"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/cardInvocation/include}"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/bb/data"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;~/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include&quot;"/>
 								</option>
 								<option id="com.qnx.qcc.option.compiler.defines.940981227" name="Defines (-D)" superClass="com.qnx.qcc.option.compiler.defines" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="_REENTRANT"/>
@@ -231,7 +231,7 @@
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/qt4/cpp/c"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/qt4/cpp/embedded"/>
 									<listOptionValue builtIn="false" value="${QNX_TARGET}/usr/include/bb/data"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/hazemkhaled/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;~/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.v20140227164900/blackberry/libs/ticore/include&quot;"/>
 								</option>
 								<option id="com.qnx.qcc.option.compiler.defines.1807513299" name="Defines (-D)" superClass="com.qnx.qcc.option.compiler.defines" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="_REENTRANT"/>
