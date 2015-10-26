@@ -25,9 +25,6 @@ public:
 	Ti::TiValue callPhoneNumberMethod(Ti::TiValue);
 	EXPOSE_METHOD(ExampleProxy, callPhoneNumberMethod);
 
-	Ti::TiValue socialShareMethod(Ti::TiValue);
-	EXPOSE_METHOD(ExampleProxy, socialShareMethod);
-
 	Ti::TiValue facebookShareMethod(Ti::TiValue);
 	EXPOSE_METHOD(ExampleProxy, facebookShareMethod);
 

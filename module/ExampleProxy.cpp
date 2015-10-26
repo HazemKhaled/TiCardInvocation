@@ -30,7 +30,6 @@ ExampleProxy::ExampleProxy(const char* name) :
 	// Create a method, it also has to start with `_`
 	createPropertyFunction("openURL", _openURLMethod);
 	createPropertyFunction("callPhoneNumber", _callPhoneNumberMethod);
-	createPropertyFunction("socialShare", _socialShareMethod);
 	createPropertyFunction("facebookShare", _facebookShareMethod);
 	createPropertyFunction("openSettings", _openSettingsMethod);
 	createPropertyFunction("openPdf", _openPdfMethod);
@@ -94,14 +93,6 @@ Ti::TiValue ExampleProxy::callPhoneNumberMethod(Ti::TiValue number) {
 		fprintf(stderr, "Failed to invoke this card\n");
 		return returnValue;
 	}
-
-	returnValue.setBool(true);
-	return returnValue;
-}
-
-Ti::TiValue ExampleProxy::socialShareMethod(Ti::TiValue text) {
-	Ti::TiValue returnValue;
-	returnValue.toBool();
 
 	returnValue.setBool(true);
 	return returnValue;
