@@ -5,11 +5,11 @@
  */
 
 #include "cardInvocationModule.h"
-#include "ExampleProxy.h"
+#include "InvocationManager.h"
 
 cardInvocationModule::cardInvocationModule(const char* name) :
 		Ti::TiModule(name) {
-	addFunction("createInvocationManager", ExampleProxy::CreateProxy);
+	addFunction("createInvocationManager", InvocationManager::CreateProxy);
 }
 
 cardInvocationModule::~cardInvocationModule() {

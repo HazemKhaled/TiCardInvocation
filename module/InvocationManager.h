@@ -12,33 +12,33 @@
 #include <bb/system/InvokeManager>
 #include <bb/system/InvokeTargetReply>
 
-class ExampleProxy: Ti::TiProxy {
+class InvocationManager: Ti::TiProxy {
 public:
-	CREATE_PROXY (ExampleProxy);
-	ExampleProxy(const char*);
-	virtual ~ExampleProxy();
+	CREATE_PROXY (InvocationManager);
+	InvocationManager(const char*);
+	virtual ~InvocationManager();
 
 	// Methods
 	Ti::TiValue openURLMethod(Ti::TiValue);
-	EXPOSE_METHOD(ExampleProxy, openURLMethod);
+	EXPOSE_METHOD(InvocationManager, openURLMethod);
 
 	Ti::TiValue callPhoneNumberMethod(Ti::TiValue);
-	EXPOSE_METHOD(ExampleProxy, callPhoneNumberMethod);
+	EXPOSE_METHOD(InvocationManager, callPhoneNumberMethod);
 
 	Ti::TiValue facebookShareMethod(Ti::TiValue);
-	EXPOSE_METHOD(ExampleProxy, facebookShareMethod);
+	EXPOSE_METHOD(InvocationManager, facebookShareMethod);
 
 	Ti::TiValue openSettingsMethod(Ti::TiValue);
-	EXPOSE_METHOD(ExampleProxy, openSettingsMethod);
+	EXPOSE_METHOD(InvocationManager, openSettingsMethod);
 
 	Ti::TiValue openPdfMethod(Ti::TiValue);
-	EXPOSE_METHOD(ExampleProxy, openPdfMethod);
+	EXPOSE_METHOD(InvocationManager, openPdfMethod);
 
 	Ti::TiValue openMapMethod(Ti::TiValue);
-	EXPOSE_METHOD(ExampleProxy, openMapMethod);
+	EXPOSE_METHOD(InvocationManager, openMapMethod);
 
 	Ti::TiValue openContactsMethod(Ti::TiValue);
-	EXPOSE_METHOD(ExampleProxy, openContactsMethod);
+	EXPOSE_METHOD(InvocationManager, openContactsMethod);
 
 private:
 	bb::system::InvokeManager invokeManager_;

@@ -5,7 +5,7 @@
  *      Author: penrique
  */
 
-#include "ExampleProxy.h"
+#include "InvocationManager.h"
 
 #include <bb/system/CardDoneMessage>
 #include <bb/system/InvokeRequest>
@@ -24,7 +24,7 @@ using namespace bb::system;
 using namespace bb::platform;
 using namespace bb::cascades::pickers;
 
-ExampleProxy::ExampleProxy(const char* name) :
+InvocationManager::InvocationManager(const char* name) :
 		Ti::TiProxy(name) {
 
 	// Create a method, it also has to start with `_`
@@ -38,11 +38,11 @@ ExampleProxy::ExampleProxy(const char* name) :
 
 }
 
-ExampleProxy::~ExampleProxy() {
+InvocationManager::~InvocationManager() {
 	// delete instatiated pointers
 }
 
-Ti::TiValue ExampleProxy::openURLMethod(Ti::TiValue url) {
+Ti::TiValue InvocationManager::openURLMethod(Ti::TiValue url) {
 
 	Ti::TiValue returnValue;
 	returnValue.toBool();
@@ -68,7 +68,7 @@ Ti::TiValue ExampleProxy::openURLMethod(Ti::TiValue url) {
 	return returnValue;
 }
 
-Ti::TiValue ExampleProxy::callPhoneNumberMethod(Ti::TiValue number) {
+Ti::TiValue InvocationManager::callPhoneNumberMethod(Ti::TiValue number) {
 
 	Ti::TiValue returnValue;
 	returnValue.toBool();
@@ -98,7 +98,7 @@ Ti::TiValue ExampleProxy::callPhoneNumberMethod(Ti::TiValue number) {
 	return returnValue;
 }
 
-Ti::TiValue ExampleProxy::facebookShareMethod(Ti::TiValue text) {
+Ti::TiValue InvocationManager::facebookShareMethod(Ti::TiValue text) {
 	//TODO: support image & url
 	Ti::TiValue returnValue;
 	returnValue.toBool();
@@ -126,7 +126,7 @@ Ti::TiValue ExampleProxy::facebookShareMethod(Ti::TiValue text) {
 	return returnValue;
 }
 
-Ti::TiValue ExampleProxy::openSettingsMethod(Ti::TiValue page) {
+Ti::TiValue InvocationManager::openSettingsMethod(Ti::TiValue page) {
 	Ti::TiValue returnValue;
 	returnValue.toBool();
 	if (invokeReply_ && !invokeReply_->isFinished()) {
@@ -152,7 +152,7 @@ Ti::TiValue ExampleProxy::openSettingsMethod(Ti::TiValue page) {
 	return returnValue;
 }
 
-Ti::TiValue ExampleProxy::openPdfMethod(Ti::TiValue url) {
+Ti::TiValue InvocationManager::openPdfMethod(Ti::TiValue url) {
 	Ti::TiValue returnValue;
 	returnValue.toBool();
 	if (invokeReply_ && !invokeReply_->isFinished()) {
@@ -179,7 +179,7 @@ Ti::TiValue ExampleProxy::openPdfMethod(Ti::TiValue url) {
 	return returnValue;
 }
 
-Ti::TiValue ExampleProxy::openMapMethod(Ti::TiValue type) {
+Ti::TiValue InvocationManager::openMapMethod(Ti::TiValue type) {
 	Ti::TiValue returnValue;
 	returnValue.toBool();
 
@@ -222,7 +222,7 @@ Ti::TiValue ExampleProxy::openMapMethod(Ti::TiValue type) {
 	return returnValue;
 }
 
-Ti::TiValue ExampleProxy::openContactsMethod(Ti::TiValue text) {
+Ti::TiValue InvocationManager::openContactsMethod(Ti::TiValue text) {
 	Ti::TiValue returnValue;
 	returnValue.toBool();
 	ContactPicker *contactPicker = new ContactPicker();
